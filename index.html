@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <!---line 6 was added to make sure the website layouts are responsive to different resolutions -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Panda Society</title>
+        <link rel="icon" href="./Images/pandalogo4.png" type="image/png" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body>
+        <div id="homepage">
+            <header id="top">
+                <h1>
+                    <a href="index.html"
+                        ><img
+                            src="./Images/pandalogo3.png"
+                            height="200"
+                            alt="site logo"
+                    /></a>
+                </h1>
+            </header>
+
+            <!-- ================ NAVIGATION =============== -->
+            <nav>
+                <ul class="navbar">
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn"
+                            >Discover</a
+                        >
+                        <div class="dropdown-content">
+                            <a href="giantpanda.html">Giant Pandas</a>
+                            <a href="redpanda.html">Red Pandas</a>
+                        </div>
+                    </li>
+
+                    <li><a href="contribute.html">Get Involved</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- ================ BODY =============== -->
+
+            <main>
+                <!-- ========== SLIDESHOW CONTAINER ARTICLE ========== -->
+
+                <div id="slideshow">
+                    <!-- ======= Slideshow container ====== -->
+
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                            <img
+                                src="Images/image14.jpg"
+                                alt="slideshow panda image" />
+                        </div>
+
+                        <div class="mySlides fade">
+                            <img
+                                src="Images/image5.jpg"
+                                alt="slideshow panda image" />
+                        </div>
+
+                        <div class="mySlides fade">
+                            <img
+                                src="Images/image3.jpg"
+                                alt="slideshow panda image" />
+                        </div>
+                    </div>
+                    <br />
+
+                    <div style="text-align: center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+
+                    <!-- the following script is used to make the slideshow banner autoplay in the homepage-->
+                    <script>
+                        let slideIndex = 0;
+                        showSlides();
+
+                        function showSlides() {
+                            let i;
+                            let slides =
+                                document.getElementsByClassName("mySlides");
+                            let dots = document.getElementsByClassName("dot");
+                            for (i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none";
+                            }
+                            slideIndex++;
+                            if (slideIndex > slides.length) {
+                                slideIndex = 1;
+                            }
+                            for (i = 0; i < dots.length; i++) {
+                                dots[i].className = dots[i].className.replace(
+                                    " active",
+                                    ""
+                                );
+                            }
+                            slides[slideIndex - 1].style.display = "block";
+                            dots[slideIndex - 1].className += " active";
+                            setTimeout(showSlides, 6000); // Change image every 2 seconds
+                        }
+                    </script>
+                </div>
+
+                <!-- ================ BLOCKQUOTE =============== -->
+
+                <blockquote>
+                    <p>
+                        "Conservation is a race against time, and we are losing
+                        ground. But we can make a difference if we act now."
+                    </p>
+
+                    <p>
+                        <b>Prince William, Duke of Cambridge</b><br />
+                        <i></i>
+                    </p>
+                </blockquote>
+
+                <!-- ================ ARTICLE 1 =============== -->
+
+                <article id="contribute-btn">
+                    <h2>How can you help?</h2>
+                    <p>
+                        <a href="contribute.html">Contribute</a>
+                    </p>
+                </article>
+
+                <!-- ================ ARTICLE 2 =============== -->
+
+                <article>
+                    <!-- ================ SECTION 1 =============== -->
+
+                    <section id="content-1">
+                        <div>
+                            <h2>Giant Pandas: Why are they endangered?</h2>
+                            <p>
+                                Giant pandas are endangered due to habitat loss,
+                                low reproductive rates, and poaching. Habitat
+                                loss and fragmentation have been caused by human
+                                activities, leaving pandas with limited access
+                                to food and shelter. Low reproductive rates and
+                                poaching are also significant factors
+                                contributing to their decline. However, with the
+                                help of laws, conservation efforts, and
+                                individual actions, there is hope for their
+                                survival. Governments and organizations have
+                                implemented measures to conserve giant pandas,
+                                and individuals can support these efforts by
+                                raising awareness and reducing their ecological
+                                footprint. By working together, we can help
+                                ensure that these beloved creatures thrive for
+                                generations to come.
+                            </p>
+                            <a href="giantpanda.html">Learn more</a>
+                        </div>
+
+                        <img
+                            src="./Images/image6.jpg"
+                            alt="Giant panda image" />
+                    </section>
+
+                    <!-- ================ SECTION 2 =============== -->
+
+                    <section id="content-2">
+                        <img src="./Images/image7.jpg" alt="Red panda image" />
+
+                        <div>
+                            <h2>What about Red Pandas?</h2>
+                            <p>
+                                Red pandas are facing numerous threats,
+                                including habitat loss, hunting, and poaching.
+                                Deforestation, development, and agricultural
+                                expansion are all contributing to the
+                                fragmentation of their habitat, making it more
+                                difficult for them to find food, mate, and move
+                                around. They are also hunted and poached for
+                                their fur, meat, and body parts, and climate
+                                change is affecting the distribution of their
+                                primary food source, bamboo. <br />
+                                But there's good news, too! Conservation
+                                organizations are working hard to protect red
+                                pandas and their habitat. This includes
+                                reforestation efforts, captive breeding
+                                programs, and community education and awareness
+                                programs.
+                            </p>
+                            <a href="redpanda.html">Learn more</a>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- ================ BLOCKQUOTE 2 =============== -->
+
+                <blockquote>
+                    <p>
+                        "The Panda is a symbol of hope and resilience, reminding
+                        us that even in the face of adversity, we can still find
+                        joy and beauty."
+                    </p>
+
+                    <p>
+                        <b>Panda Society</b>
+                    </p>
+                </blockquote>
+            </main>
+
+            <!-- ================ SIDEBAR =============== -->
+
+            <aside id="sidebar">
+                <div>
+                    <a
+                        href="https://www.independent.co.uk/independentpremium/world/panda-vegetarians-false-thumb-mystery-b2115565.html">
+                        <b
+                            >Study unravels mystery of how pandas became
+                            vegetarians around six million years ago -
+                        </b>
+                    </a>
+                    <i>Independant</i>
+                </div>
+
+                <div>
+                    <a
+                        href="https://www.independent.co.uk/news/science/why-are-giant-pandas-black-white-b1962676.html">
+                        <b
+                            >Why are giant pandas black and white? Here’s how we
+                            found out -
+                        </b>
+                    </a>
+                    <i>Independant</i>
+                </div>
+            </aside>
+
+            <!-- ================ FOOTER =============== -->
+            <footer>
+                <ul class="navbar-2">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contribute.html">Get Involved</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="footer-columns">
+                    <img
+                        src="Images/pandalogo3.png"
+                        alt="panda society logo"
+                        height="100" />
+                    <p>&copy; Panda Society. All rights reserved.</p>
+                    <p>Privacy Policy</p>
+
+                    <address>support@pandasociety.com.au</address>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
