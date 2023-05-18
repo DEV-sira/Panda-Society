@@ -19,6 +19,7 @@ body {
     background-image: url(Images/BGimage.jpg);
     background-position: right;
     background-size: cover;
+    overflow-x: hidden ;
 }
 
 /* I have used Background size cover so that a single background image stretches and covers the body area of each webpage*/
